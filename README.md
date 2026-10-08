@@ -1,2 +1,1 @@
-# bd-web-crawl-go
-Build a Web Scraper in Go
+# boot.dev "Build a Web Scraper in Go" project
