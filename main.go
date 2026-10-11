@@ -43,7 +43,7 @@ func main() {
 	go cfg.crawlPage(rawBaseURL)
 	cfg.wg.Wait()
 
-	for normalizedURL := range cfg.pages {
-		fmt.Printf("found: %s\n", normalizedURL)
+	if err := writeJSONReport(cfg.pages, "report.json"); err != nil {
+		fmt.Printf("Error - writeJSONReport: %v\n", err)
 	}
 }
